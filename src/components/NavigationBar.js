@@ -29,8 +29,8 @@ function NavScroll() {
                 Completed Games
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="https://store.playstation.com/en-ie/pages/latest" disabled>
+              Playstation Store
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
