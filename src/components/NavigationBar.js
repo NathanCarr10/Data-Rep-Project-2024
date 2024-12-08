@@ -22,7 +22,7 @@ function NavScroll() {
             <Nav.Link as={Link} to ="/Content">Home</Nav.Link>
             <Nav.Link as={Link} to ="/Top-Rated">Top Rated Games</Nav.Link>
             <NavDropdown title="Library" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">My Games</NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Add Games</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Wishlist
               </NavDropdown.Item>
