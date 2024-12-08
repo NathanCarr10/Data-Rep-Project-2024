@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
+import TopRatedGames from './components/TopRatedGames';
 
 //App component is the main component of the application.
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Content />} />
         <Route path="/Read" element={<h1>Read Component</h1>} />
         <Route path="/Create" element={<h1>Create Component</h1>} />
+        <Route path="/Top-Rated" element={<TopRatedGames />} />
       </Routes>
       <Footer />
     </Router>
