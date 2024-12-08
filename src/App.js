@@ -17,7 +17,7 @@ function App() {
     <Router>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<Content />} />
+        <Route path="/Content" element={<Content />} />
         <Route path="/Read" element={<h1>Read Component</h1>} />
         <Route path="/Create" element={<h1>Create Component</h1>} />
         <Route path="/Top-Rated" element={<TopRatedGames />} />
