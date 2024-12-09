@@ -1,12 +1,16 @@
 const express = require('express'); //Express is a user-friendly framework that simplifies the development process of Node applications
 const cors = require('cors');//To allow communication between your React app and Node/Express server, you need to install and configure the cors middleware
 const bodyParser = require('body-parser');//Installed body-parser: To handle POST requests
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); //code to import mongoose database
 
 const app = express();
 const port = 4000;
 
-app.use(cors());//This middleware setup allows your frontend app (React) to make API requests to the backend (Express) without encountering CORS-related issues.
+//This middleware setup allows your frontend app (React) to make API requests to the backend (Express) without encountering CORS-related issues.
+app.use(cors());
+
+//Body parser middleware to handle JSON data in POST requests
+app.use(bodyParser.json());
 
 //added cors headers to enable cors cross origin requests
 app.use(function (req, res, next) {
@@ -16,12 +20,8 @@ app.use(function (req, res, next) {
     next();
   });
 
-
-app.use(bodyParser.json());
-
-//code to import mongoose database
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://admin:admin@cluster10.paimy.mongodb.net/DB14'); //adding in link to mongoose server
+//Connect to Mongo DB
+mongoose.connect('mongodb+srv://admin:admin@cluster10.paimy.mongodb.net/My-Video-Games'); //adding in link to mongoose server
 
 //Variable to add game data to Mongoose Database
 const gameSchema = new mongoose.Schema({
@@ -65,5 +65,5 @@ app.delete('/api/games/:id', async (req,res) => {
 
 //starting the server
 app.listen(port, () => {
-  console.log('Server is running on http://localhost:${4000}')
+  console.log(`Server is running on http://localhost:${port}`);
 });
