@@ -37,7 +37,14 @@ const gameSchema = new mongoose.Schema({
     status: String,
 });
 
-const gameModel = new mongoose.model('Video-Games', gameSchema);
+const gameModel = new mongoose.model('video-games', gameSchema);
+
+//Post method to send game information to database
+app.post('/api/games', async (req,res) => {
+  const newGame = new gameModel(req.body);
+  await newGame.save();
+  res.status(201).json({message: 'Game added successfully!', game: newGame});
+});
 
 //Get method for all games
 app.get('/api/games', async (req, res) => {
@@ -45,9 +52,15 @@ app.get('/api/games', async (req, res) => {
   res.status(200).json({ games });
 });
 
-//Find games by status (wishlist or completed)
-app.get('/api/games/status/:status', async (req, res) => {
-  const games = await gameModel.find({ status: req.params.status });
+//Find games from wishlist
+app.get('/api/games/status/wishlist', async (req, res) => {
+  const games = await gameModel.find({ status: 'wishlist' });
+  res.status(200).json({ games });
+});
+
+//Find games from completed games list
+app.get('/api/games/status/completed', async (req, res) => {
+  const games = await gameModel.find({ status: 'completed' });
   res.status(200).json({ games });
 });
 
@@ -58,7 +71,7 @@ app.get('/api/games/:id', async (req, res) => {
 });
 
 //Update a game by ID
-app.put('api/games/:id', async (req,res) => {
+app.put('/api/games/:id', async (req,res) => {
   const updatedGame = await gameModel.findById(req.params.id, req.body, {new: true});
   res.status(200).json({message: 'Game Updated!', games: updatedGame});
 });

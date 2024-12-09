@@ -27,7 +27,7 @@ const Wishlist = () => {
                 <li key={game._id}> {/* Use the unique game ID as the key */}
                   <h3>{game.title}</h3>
                   <p>Release Year: {game.releaseYear}</p>
-                  <img src={game.coverUrl} alt={game.title} style={{ width: '200px', height: 'auto' }} />
+                  <img src={game.coverURL} alt={game.title} style={{ width: '200px', height: 'auto' }} />
                 </li>
               ))}
             </ul>

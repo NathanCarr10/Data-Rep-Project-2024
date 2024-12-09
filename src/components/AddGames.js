@@ -6,7 +6,7 @@ const AddGames = () => {
     const [title, setTitle] = useState('');
     const [releaseYear, setReleaseYear] = useState('');
     const [coverURL, setCoverURL] = useState('');
-    const [status, setStatus] = useState('');
+    const [status, setStatus] = useState('wishlist');
 
     //Function to handle form submission
     const handleSubmit = async (e) => {
