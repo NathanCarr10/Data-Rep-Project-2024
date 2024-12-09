@@ -18,8 +18,12 @@ const AddGames = () => {
 
     //Use axios to send a POST request to the backend
     axios.post('http://localhost:4000/api/games', game)
-        .then((res) => console.log(res.data))
-        .catch((error) => console.log(error));
+    .then((res) => {
+        console.log("Game added successfully:", res.data);
+    })
+    .catch((error) => {
+        console.error("Error adding game:", error);
+    });
 
     //Clear form after submission
     setTitle('');

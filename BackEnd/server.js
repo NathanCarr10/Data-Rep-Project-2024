@@ -21,7 +21,13 @@ app.use(function (req, res, next) {
   });
 
 //Connect to Mongo DB
-mongoose.connect('mongodb+srv://admin:admin@cluster10.paimy.mongodb.net/My-Video-Games'); //adding in link to mongoose server
+mongoose.connect('mongodb+srv://admin:admin@cluster10.paimy.mongodb.net/DB14')
+  .then(() => {
+    console.log("MongoDB connected successfully!");
+  })
+  .catch((err) => {
+    console.log("MongoDB connection error:", err);
+  });
 
 //Variable to add game data to Mongoose Database
 const gameSchema = new mongoose.Schema({
