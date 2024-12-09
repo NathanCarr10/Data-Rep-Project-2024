@@ -34,6 +34,7 @@ const AddGames = () => {
     setStatus('wishlist');
     };
 
+    //HTML for form submission for user to enter game data
 return (
     <div>
         <h2>Add a Video Game</h2>
