@@ -9,6 +9,9 @@ import NavigationBar from './components/NavigationBar';
 import Footer from './components/Footer';
 import Content from './components/Content';
 import TopRatedGames from './components/TopRatedGames';
+import AddGames from './components/AddGames';
+import Wishlist from './components/Wishlist';
+import CompletedGames from './components/CompletedGames';
 
 //App component is the main component of the application.
 function App() {
@@ -18,9 +21,10 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path="/Content" element={<Content />} />
-        <Route path="/Read" element={<h1>Read Component</h1>} />
-        <Route path="/Create" element={<h1>Create Component</h1>} />
+        <Route path="/AddGames" element={<AddGames />} />
+        <Route path="/WishList" element={<Wishlist />} />
         <Route path="/Top-Rated" element={<TopRatedGames />} />
+        <Route path="/CompletedGames" element={<CompletedGames />} />
       </Routes>
       <Footer />
     </Router>
