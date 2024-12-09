@@ -9,7 +9,7 @@ function SearchBar(){
         //handleSearch is used when the user clicks "Search button or presses Enter"
         if (query.trim()) {
             //querty.trim checks if query is empty
-            window.open('https://www.google.com/search?q=${query}', "blank");
+            window.open(`https://www.google.com/search?q=${query}`, "blank");
             //opens a new tab with google search of query
         }
     };
