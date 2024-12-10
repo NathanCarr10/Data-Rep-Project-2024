@@ -12,6 +12,7 @@ import TopRatedGames from './components/TopRatedGames';
 import AddGames from './components/AddGames';
 import Wishlist from './components/Wishlist';
 import CompletedGames from './components/CompletedGames';
+import EditGame from './components/Edit';
 
 //App component is the main component of the application.
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/WishList" element={<Wishlist />} />
         <Route path="/Top-Rated" element={<TopRatedGames />} />
         <Route path="/CompletedGames" element={<CompletedGames />} />
+        <Route path="/edit/:id" element={<EditGame />} />
       </Routes>
       <Footer />
     </Router>

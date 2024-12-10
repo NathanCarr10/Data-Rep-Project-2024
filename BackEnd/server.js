@@ -71,8 +71,8 @@ app.get('/api/games/:id', async (req, res) => {
 });
 
 //Update a game by ID
-app.put('/api/games/:id', async (req,res) => {
-  const updatedGame = await gameModel.findById(req.params.id, req.body, {new: true});
+app.put('/api/games/:id', async (req, res) => {
+  const updatedGame = await gameModel.findByIdAndUpdate(req.params.id, req.body, {new: true});
   res.status(200).json({message: 'Game Updated!', games: updatedGame});
 });
 

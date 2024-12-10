@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 const Wishlist = () => {
     // State to hold the list of games in the wishlist
@@ -28,6 +29,10 @@ const Wishlist = () => {
                   <h3>{game.title}</h3>
                   <p>Release Year: {game.releaseYear}</p>
                   <img src={game.coverURL} alt={game.title} style={{ width: '200px', height: 'auto' }} />
+                  <p>Status: {game.status}</p>
+                  <Link to={`/edit/${game._id}`}>
+                  <button>Edit</button>
+                  </Link>
                 </li>
               ))}
             </ul>
