@@ -78,8 +78,8 @@ app.put('/api/games/:id', async (req, res) => {
 
 //Delete a game by ID
 app.delete('/api/games/:id', async (req,res) => {
-  const deletedGame = await gameModel.findByIdAndDelete(req.params.id);
-  res.status(200).json({message: 'Games Deleted!', game: deletedGame});
+  const deletedGame = await gameModel.findByIdAndDelete(req.params.id, req.body, {new: true});
+  res.status(200).json({message: 'Game deleted successfully', games: deletedGame});
 });
 
 //starting the server
