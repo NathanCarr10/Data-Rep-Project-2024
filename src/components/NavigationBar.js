@@ -17,6 +17,7 @@ function NavScroll() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+            {/* All links to my .js pages accessable from the Nav Bar */}
             <Nav.Link as={Link} to ="/Content">Home</Nav.Link>
             <Nav.Link as={Link} to ="/Top-Rated">Top Rated Games</Nav.Link>
             <NavDropdown title="Library" id="navbarScrollingDropdown">
@@ -29,6 +30,7 @@ function NavScroll() {
                 Completed Games
               </NavDropdown.Item>
             </NavDropdown>
+            {/* Links to different video game stores */}
             <Nav.Link href="https://store.playstation.com/en-ie/pages/latest">
               Playstation Store
             </Nav.Link>
@@ -39,6 +41,7 @@ function NavScroll() {
               Steam 
             </Nav.Link>
           </Nav>
+          {/* Google search bar  */}
           <SearchBar />
         </Navbar.Collapse>
       </Container>

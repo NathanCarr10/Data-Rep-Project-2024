@@ -1,9 +1,6 @@
 import React from 'react';
 
-/**
- * Content component is a simple functional component that displays
- * a "Welcome To Your Video Games Homepage!" message along with the current time.
- */
+//Content page is essentially the homepage of my React C.R.U.D App.
 
 const Content = () => {
   //Function to have a Super Mario background image on Content page

@@ -22,7 +22,7 @@ const AddGames = () => {
         console.log("Game added successfully:", res.data);
     })
     .catch((error) => {
-        console.error("Error adding game:", error);
+        console.error("Error adding game:", error); // Display error message on console if problem posting data
     });
 
     //Clear form after submission

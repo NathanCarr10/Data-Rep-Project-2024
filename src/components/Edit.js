@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-//import { response } from 'express';
 
 export default function EditGame() {
 
@@ -27,7 +26,7 @@ export default function EditGame() {
             setStatus(game.status);
         })
         .catch((error) => {
-            console.error('Error fetching game: ', error);
+            console.error('Error fetching game: ', error);//Send error message to console if cannot retrieve data
         });
     }, [id]);
 
