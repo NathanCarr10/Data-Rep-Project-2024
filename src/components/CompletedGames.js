@@ -45,10 +45,10 @@ const CompletedGames = () => {
                   <img src={game.coverURL} alt={game.title} style={{ width: '200px', height: 'auto' }} />
                   <p>Status: {game.status}</p>
                   <Link to={`/edit/${game._id}`}>
-                  <button>Edit</button>
+                  <button style={{backgroundColor: 'blue', color: 'white'}}>Edit</button>
                   </Link>
                   {/* Delete button */}
-                  <button onClick={() => handleDelete(game._id)}>Delete</button>
+                  <button onClick={() => handleDelete(game._id)} style={{backgroundColor: 'red', color: 'white'}}>Delete</button>
                 </li>
               ))}
             </ul>
